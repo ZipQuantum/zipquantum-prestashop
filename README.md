@@ -1,5 +1,6 @@
 <p align="center">
-  <img src="https://cdn.simpleicons.org/prestashop/FF007A" alt="PrestaShop" width="84" height="84">
+  <img src="https://cdn.simpleicons.org/prestashop/FF007A" alt="PrestaShop logo" width="64" height="64"><br>
+  <strong>PrestaShop</strong>
 </p>
 
 <h1 align="center">ZipQuantum – Smart Links & QR Codes for PrestaShop</h1>
