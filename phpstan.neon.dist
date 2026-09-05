@@ -1,0 +1,10 @@
+parameters:
+  level: 6
+  paths:
+    - src/Api/ApiException.php
+    - src/Security/Crypto.php
+    - src/Support/CanonicalJson.php
+    - src/Support/LocalPath.php
+    - src/Support/RetryPolicy.php
+  bootstrapFiles:
+    - tests/static-bootstrap.php

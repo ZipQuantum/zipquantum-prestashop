@@ -1,0 +1,21 @@
+.zqps-shell { max-width: 1240px; }
+.zqps-heading { display: flex; align-items: center; gap: 12px; margin: 0 0 18px; }
+.zqps-heading h2 { margin: 0; }
+.zqps-heading p { margin: 3px 0 0; color: #6c737f; }
+.zqps-panel { border-radius: 8px; box-shadow: 0 1px 3px rgba(19, 30, 54, .12); }
+.zqps-panel h3 { margin-top: 0; }
+.zqps-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.zqps-checks { display: flex; flex-wrap: wrap; gap: 18px; margin: 12px 0 18px; }
+.zqps-badge { display: inline-block; padding: 3px 9px; border-radius: 999px; font-weight: 600; }
+.zqps-badge-success { color: #1d5d38; background: #d9f2e3; }
+.zqps-message { min-height: 20px; margin-top: 12px; }
+.zqps-stats { display: grid; grid-template-columns: repeat(4, minmax(70px, 1fr)); gap: 8px; margin-bottom: 18px; }
+.zqps-stats div { padding: 10px; background: #f4f6f8; border-radius: 6px; text-align: center; }
+.zqps-stats strong, .zqps-stats span { display: block; }
+.zqps-stats strong { font-size: 19px; }
+.zqps-cron { margin-top: 16px; }
+.zqps-cron input { margin-top: 8px; }
+.zqps-section-heading { display: flex; align-items: center; justify-content: space-between; gap: 15px; }
+.zqps-panel .btn { margin: 0 6px 6px 0; }
+@media (max-width: 900px) { .zqps-grid { grid-template-columns: 1fr; } }
+

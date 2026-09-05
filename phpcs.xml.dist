@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<ruleset name="ZipQuantum PrestaShop">
+  <description>Marketplace-oriented PHP coding checks.</description>
+  <file>zipquantum.php</file>
+  <file>src</file>
+  <file>controllers</file>
+  <file>sql</file>
+  <exclude-pattern>*/index.php</exclude-pattern>
+  <arg name="extensions" value="php"/>
+  <arg value="ps"/>
+  <rule ref="PSR12">
+    <!-- PrestaShop requires executable context guards and global legacy controller/module classes. -->
+    <exclude name="PSR1.Files.SideEffects.FoundWithSymbols"/>
+    <exclude name="PSR1.Classes.ClassDeclaration.MissingNamespace"/>
+    <!-- The Marketplace validator requires the file comment immediately after the PHP opening tag. -->
+    <exclude name="PSR12.Files.FileHeader.SpacingAfterBlock"/>
+  </rule>
+  <rule ref="Generic.Files.LineLength">
+    <properties>
+      <property name="lineLimit" value="140"/>
+      <property name="absoluteLineLimit" value="180"/>
+    </properties>
+  </rule>
+</ruleset>

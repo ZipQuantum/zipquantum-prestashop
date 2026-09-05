@@ -1,0 +1,42 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: curl, json, openssl, zip
+          coverage: none
+      - uses: ramsey/composer-install@v3
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install reportlab pypdf
+      - run: composer test
+      - run: composer lint
+      - run: composer analyse
+      - run: python bin/build_user_guide.py
+      - run: php bin/build.php
+      - run: unzip -t dist/zipquantum.zip
+      - name: Generate checksum
+        run: sha256sum dist/zipquantum.zip > dist/zipquantum.zip.sha256
+      - name: Publish GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: >-
+          gh release create "${GITHUB_REF_NAME}"
+          dist/zipquantum.zip
+          dist/zipquantum.zip.sha256
+          --generate-notes
+          --title "ZipQuantum for PrestaShop ${GITHUB_REF_NAME}"
