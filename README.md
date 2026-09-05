@@ -64,5 +64,6 @@ This repository does not modify `zipquantum-app`. The exact provider-neutral cha
 AFL-3.0 — see [LICENSE.md](LICENSE.md).
 
 <p align="center">
+  <img src="docs/assets/footer-super-z.png" alt="ZipQuantum mascot waving" width="150"><br>
   <a href="https://zq.tn/">Product</a> · <a href="https://zq.tn/docs/">Documentation</a> · <a href="https://zq.tn/developers/ai-agents/">AI agents</a>
 </p>
