@@ -58,3 +58,11 @@ The Marketplace archive is generated as `dist/zipquantum.zip`. It contains one t
 ## Backend boundary
 
 This repository does not modify `zipquantum-app`. The exact provider-neutral changes needed there are documented in [`docs/BACKEND_CHANGES_REQUIRED.md`](docs/BACKEND_CHANGES_REQUIRED.md).
+
+## License
+
+AFL-3.0 — see [LICENSE.md](LICENSE.md).
+
+<p align="center">
+  <a href="https://zq.tn/">Product</a> · <a href="https://zq.tn/docs/">Documentation</a> · <a href="https://zq.tn/developers/ai-agents/">AI agents</a>
+</p>
